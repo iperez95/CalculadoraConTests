@@ -7,6 +7,7 @@ package calculadora;
  *
  */
 public class Suma {
+    public static double sumaAcumulada;
     /**
      * M�todo que devulve el resultado de la suma de dos n�meros enteros
      * @param a es el primer n�mero para realizar la suma
@@ -28,8 +29,8 @@ public class Suma {
      */
     public double suma_reales (double a , double b) { // m�todo que nos devuelve un valor decimal , con los parametros a y b
 
-        int totalr ;
-        totalr = (int) ((int) a+b) ;
+        double totalr ;
+        totalr = (double) ((double) a+b) ;
         return totalr ;
     }
 
@@ -53,24 +54,10 @@ public class Suma {
      * @param a es el n�mero que va a sumar el valor acumulado
      * @return devuelve el resultado
      */
-    public int valor_acumulado (int a) {
+    public double valor_acumulado(double a){
 
-        int totalv ;
-        totalv = a ;
-
-        int Sumatorio = 0 ;
-        int Contador = 0 ;
-
-        while (Contador !=0) {
-
-            Sumatorio = Sumatorio + Contador ;
-            Contador -- ;
-
-
-        }
-
-        return totalv ;
-
+        sumaAcumulada = sumaAcumulada + a;
+        return sumaAcumulada;
     }
 
 }
